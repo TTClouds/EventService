@@ -2,14 +2,59 @@ syntax="proto3";
 
 package protocol;
 
-service HelloService {
-  rpc SayHello (HelloRequest) returns (HelloResponse);
+option csharp_namespace="EventService.Protocol";
+
+import "common.proto";
+
+service ProducerService {
+  rpc Connect (stream ProducerRequest) returns (stream ProducerResponse);
 }
 
-message HelloRequest {
-  string greeting = 1;
+message ProducerRequest {
+  string requestId = 1;
+  oneof payload {
+    ConnectProducer connect = 2;
+    SendProducer send = 3;
+    CloseProducer close = 4;
+  }
 }
 
-message HelloResponse {
-  string reply = 1;
+message ConnectProducer {
+  string authToken = 1;
+  string topic = 2;
+}
+
+message SendProducer {
+  repeated EventMessage events = 1;
+}
+
+message CloseProducer {
+}
+
+message ProducerResponse {
+  string requestId = 1;
+  oneof payload {
+    ProducerConnected connected = 2;
+    ProducerQuotaAssignment quotaAssigned = 3;
+    ProducerAccepted accepted = 4;
+    ProducerRejected rejected = 5;
+  }
+}
+
+message ProducerConnected {
+  AssignedQuota quota = 1;
+
+}
+
+message ProducerQuotaAssignment {
+  AssignedQuota quota = 1;
+
+}
+
+message ProducerAccepted {
+}
+
+message ProducerRejected {
+  ErrorCodes errorCode = 1;
+  string errorMessage = 2;
 }
