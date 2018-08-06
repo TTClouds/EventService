@@ -54,7 +54,27 @@ module EventMessage =
     let setBase64 arr = ByteString.FromBase64 arr |> set
     let base64Lens = getBase64, setBase64
 
+    let getUTF8 m = get m |> fun b -> b.ToStringUtf8()
+    let setUTF8 arr = ByteString.CopyFromUtf8 arr |> set
+    let UTF8Lens = getUTF8, setUTF8
+
 [<RequireQualifiedAccess>]
 module AssignedQuota =
   let empty() = AssignedQuota()
+
+  [<RequireQualifiedAccess>]
+  module MessageCount =
+    let get (m: AssignedQuota) = m.MessageCount
+    let set count (m: AssignedQuota) =
+      do m.MessageCount <- count
+      m
+    let lens = get, set
+
+  [<RequireQualifiedAccess>]
+  module BytesCount =
+    let get (m: AssignedQuota) = m.BytesCount
+    let set count (m: AssignedQuota) =
+      do m.BytesCount <- count
+      m
+    let lens = get, set
 

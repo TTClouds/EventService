@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Common.fs" />
+    <Compile Include="Producer.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EventService.Protocol\EventService.Protocol.csproj" />
