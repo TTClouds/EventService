@@ -71,3 +71,78 @@ module ProducerRequest =
     let lens = get, set
 
 
+
+[<RequireQualifiedAccess>]
+module ProducerResponse =
+  let empty() = ProducerResponse()
+
+  let (|IsProducerConnected|IsProducerQuotaAssigned|IsProducerAccepted|IsProducerRejected|IsEmptyProducerResponse|)
+    (response: ProducerResponse) =
+    match response.PayloadCase with
+    | ProducerResponse.PayloadOneofCase.Connected ->
+      IsProducerConnected response.Connected
+    | ProducerResponse.PayloadOneofCase.QuotaAssigned ->
+      IsProducerQuotaAssigned response.QuotaAssigned
+    | ProducerResponse.PayloadOneofCase.Accepted ->
+      IsProducerAccepted response.Accepted
+    | ProducerResponse.PayloadOneofCase.Rejected ->
+      IsProducerRejected response.Rejected
+    | _ ->
+      IsEmptyProducerResponse
+
+  [<RequireQualifiedAccess>]
+  module RequestId =
+    let get (m: ProducerRequest) = m.RequestId
+    let set key (m: ProducerRequest) =
+      do m.RequestId <- emptyStringIfNull key
+      m
+    let has m = get m |> isEmptyString |> not
+    let lens = get, set
+
+[<RequireQualifiedAccess>]
+module ProducerConnected =
+  let empty() = ProducerConnected()
+
+  [<RequireQualifiedAccess>]
+  module Quota =
+    let get (m: ProducerConnected) = m.Quota
+    let set key (m: ProducerConnected) =
+      do m.Quota <- key
+      m
+    let lens = get, set
+
+[<RequireQualifiedAccess>]
+module ProducerQuotaAssignment =
+  let empty() = ProducerQuotaAssignment()
+
+  [<RequireQualifiedAccess>]
+  module Quota =
+    let get (m: ProducerQuotaAssignment) = m.Quota
+    let set key (m: ProducerQuotaAssignment) =
+      do m.Quota <- key
+      m
+    let lens = get, set
+
+[<RequireQualifiedAccess>]
+module ProducerAccepted =
+  let empty() = ProducerAccepted()
+
+[<RequireQualifiedAccess>]
+module ProducerRejected =
+  let empty() = ProducerRejected()
+
+  [<RequireQualifiedAccess>]
+  module ErrorCode =
+    let get (m: ProducerRejected) = m.ErrorCode
+    let set key (m: ProducerRejected) =
+      do m.ErrorCode <- key
+      m
+    let lens = get, set
+
+  [<RequireQualifiedAccess>]
+  module ErrorMessage =
+    let get (m: ProducerRejected) = m.ErrorMessage
+    let set key (m: ProducerRejected) =
+      do m.ErrorMessage <- key
+      m
+    let lens = get, set
