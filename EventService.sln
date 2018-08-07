@@ -10,9 +10,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{07213A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventService.Protocol", "EventService.Protocol\EventService.Protocol.csproj", "{70374757-570E-4DE1-91CB-8109F4ADA8E7}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.Core", "EventService.Core\EventService.Core.fsproj", "{3A114F4F-014F-4C40-A696-D5BE0EEECF19}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.FsProtocol", "EventService.FsProtocol\EventService.FsProtocol.fsproj", "{3A114F4F-014F-4C40-A696-D5BE0EEECF19}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.Core.Tests", "EventService.Core.Tests\EventService.Core.Tests.fsproj", "{EAE083B9-9E83-4D35-B00D-B8F0825B0715}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.FsProtocol.Tests", "EventService.FsProtocol.Tests\EventService.FsProtocol.Tests.fsproj", "{EAE083B9-9E83-4D35-B00D-B8F0825B0715}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

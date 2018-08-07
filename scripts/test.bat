@@ -1,1 +1,1 @@
-dotnet test EventService.Core.Tests
+dotnet test EventService.FsProtocol.Tests
