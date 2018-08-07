@@ -52,3 +52,5 @@ and ConjunctiveTopicQuery = {
   eventType: StringEquality option
   meta: Map<string, StringEquality> option
 }
+
+type StreamingService<'req, 'res> = ('res -> unit) -> ('req -> unit)

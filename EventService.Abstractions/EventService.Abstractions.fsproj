@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CommonTypes.fs" />
-    <Compile Include="ProducerTypes.fs" />
-    <Compile Include="ReaderTypes.fs" />
-    <Compile Include="ConsummerTypes.fs" />
-    <Compile Include="Services.fs" />
+    <Compile Include="Common.fs" />
+    <Compile Include="Reader.fs" />
+    <Compile Include="Producer.fs" />
+    <Compile Include="Consumer.fs" />
+    <Compile Include="Manager.fs" />
+    <Compile Include="EventService.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

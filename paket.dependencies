@@ -8,3 +8,6 @@ nuget Grpc.Tools 1.14.0
 nuget FsUnit
 nuget Hopac
 nuget FSharp.Core
+nuget Microsoft.NET.Test.Sdk 15.7.2
+nuget nunit 3.10.1
+nuget NUnit3TestAdapter 3.10.0

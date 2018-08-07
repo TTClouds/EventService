@@ -42,3 +42,5 @@ and ProducerRejected = {
   errorCode: ErrorCodes
   errorMessage: string
 }
+
+type ProducerService = StreamingService<ProducerRequest, ProducerResponse>

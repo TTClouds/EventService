@@ -4,10 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="InMemoryService.fs" />
+    <Compile Include="EventServiceBase.fs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EventService.Abstractions\EventService.Abstractions.fsproj" />
+    <ProjectReference Include="..\EventService.Protocol\EventService.Protocol.csproj" />
+    <ProjectReference Include="..\EventService.FsProtocol\EventService.FsProtocol.fsproj" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

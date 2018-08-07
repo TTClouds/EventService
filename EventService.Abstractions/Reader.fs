@@ -64,3 +64,4 @@ and ReaderRejected = {
   errorMessage: string
 }
 
+type ReaderService = StreamingService<ReaderRequest, ReaderResponse>
