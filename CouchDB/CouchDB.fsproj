@@ -4,11 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="InCouchDB.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Abstractions\Abstractions.fsproj" />
-    <ProjectReference Include="..\InMemory\InMemory.fsproj" />
+    <Compile Include="CouchAPI.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>
