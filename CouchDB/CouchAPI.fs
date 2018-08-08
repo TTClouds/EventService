@@ -3,11 +3,33 @@ namespace CouchDB.CouchAPI
 open System.Net.Http
 open System
 open System.Net.Http.Headers
+open Newtonsoft.Json
+open System.Text
+open System.IO
 
 [<AutoOpen>]
 module Basics =
+  let getTextReader (response: HttpResponseMessage) = async {
+    let encoding =
+      let encStr =
+        let ct = response.Content.Headers.ContentType
+        if ct = null || ct.CharSet = null then
+          Encoding.UTF8.WebName
+        else
+          ct.CharSet
+      try
+        Encoding.GetEncoding encStr
+      with
+      | ex -> invalidOp (sprintf "Invalid charset: '%s'"  encStr)
+    let! stream = Async.AwaitTask <| response.Content.ReadAsStreamAsync()
+    let reader = new StreamReader(stream, encoding)
+    return reader
+  }
+
   let fromJson<'a> (response: HttpResponseMessage) = async {
     let! string = Async.AwaitTask <| response.Content.ReadAsStringAsync()
+    let serializer = JsonSerializer()
+    serializer.Deserialize(reader)
     return ()
   }
 

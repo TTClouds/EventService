@@ -8,6 +8,7 @@ nuget FsUnit
 nuget Hopac
 nuget FSharp.Core
 nuget Microsoft.NET.Test.Sdk 15.7.2
+nuget Newtonsoft.Json 11.0.2
 nuget nunit 3.10.1
 nuget NUnit3TestAdapter 3.10.0
 nuget System.Net.Http
