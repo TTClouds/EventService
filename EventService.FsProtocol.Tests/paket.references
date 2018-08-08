@@ -1,9 +1,0 @@
-FSharp.Core
-Google.Protobuf
-Google.Protobuf.Tools
-Grpc
-Grpc.Tools
-FsUnit
-nunit
-NUnit3TestAdapter
-Microsoft.NET.Test.Sdk

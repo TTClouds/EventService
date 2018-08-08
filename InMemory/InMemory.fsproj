@@ -4,11 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Common.fs" />
-    <Compile Include="Producer.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EventService.Protocol\EventService.Protocol.csproj" />
+    <Compile Include="Library.fs" />
   </ItemGroup>
   <Import Project="..\.paket\Paket.Restore.targets" />
 </Project>

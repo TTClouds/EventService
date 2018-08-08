@@ -8,17 +8,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{07213A
 		paket.dependencies = paket.dependencies
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventService.Protocol", "EventService.Protocol\EventService.Protocol.csproj", "{70374757-570E-4DE1-91CB-8109F4ADA8E7}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Abstractions", "Abstractions\Abstractions.fsproj", "{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.FsProtocol", "EventService.FsProtocol\EventService.FsProtocol.fsproj", "{3A114F4F-014F-4C40-A696-D5BE0EEECF19}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.FsProtocol.Tests", "EventService.FsProtocol.Tests\EventService.FsProtocol.Tests.fsproj", "{EAE083B9-9E83-4D35-B00D-B8F0825B0715}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.Abstractions", "EventService.Abstractions\EventService.Abstractions.fsproj", "{607ED73D-08F1-4BB3-A1C9-D97507B420DB}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.InMemory", "EventService.InMemory\EventService.InMemory.fsproj", "{DE3DC6F3-C24A-4C33-9E5C-D473DBE3ED79}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EventService.InMemory.Tests", "EventService.InMemory.Tests\EventService.InMemory.Tests.fsproj", "{21C245B3-1285-4C32-BAD3-F458EBD046F8}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "InMemory", "InMemory\InMemory.fsproj", "{DF300258-2339-4181-AE76-9446E39592ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,5 +97,29 @@ Global
 		{21C245B3-1285-4C32-BAD3-F458EBD046F8}.Release|x64.Build.0 = Release|Any CPU
 		{21C245B3-1285-4C32-BAD3-F458EBD046F8}.Release|x86.ActiveCfg = Release|Any CPU
 		{21C245B3-1285-4C32-BAD3-F458EBD046F8}.Release|x86.Build.0 = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|x64.Build.0 = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{DB7B1597-F153-4CD6-980B-DEFC6D0CA5DE}.Release|x86.Build.0 = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|x64.Build.0 = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Debug|x86.Build.0 = Debug|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|x64.ActiveCfg = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|x64.Build.0 = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|x86.ActiveCfg = Release|Any CPU
+		{DF300258-2339-4181-AE76-9446E39592ED}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
