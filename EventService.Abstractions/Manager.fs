@@ -9,6 +9,8 @@ and ManagerRequestPayload =
   | ConnectManager of ConnectManager
   | ListTopicsManager
   | DetailsTopicManager of DetailsTopicManager
+  | CreateTopicManager of CreateTopicManager
+  | RemoveTopicManager of RemoveTopicManager
   | ListSubscriptionsManager of ListSubscriptionsManager
   | DetailsSubscriptionManager of DetailsSubscriptionManager
   | CloseManager
@@ -18,6 +20,14 @@ and ConnectManager = {
 }
 
 and DetailsTopicManager = {
+  topic: string
+}
+
+and CreateTopicManager = {
+  topic: string
+}
+
+and RemoveTopicManager = {
   topic: string
 }
 
